@@ -33,3 +33,70 @@ public class Main {
         System.out.println("Maximum Subarray sum is : " +n);
     }
 }
+// or 
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] nums = {-2, 1,4,-6,2};
+	 int maxSum = nums[0];
+        int currentSum = nums[0];
+        int start = 0;
+        int end = 0;
+        int tempStart = 0;
+
+        for (int i = 1; i < nums.length; i++) {
+            if (currentSum + nums[i] < nums[i]) {
+                currentSum = nums[i];
+                tempStart = i;
+            } else {
+                currentSum += nums[i];
+            }
+
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
+                start = tempStart;
+                end = i;
+            }
+        }
+        
+        System.out.println("max subarray sum index start="+start+" end="+end+" maxsum="+maxSum);
+	}
+}
+
+
+
+
+//count of subarray whose sum equals to given input.....
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int arr[]={1};
+		int start=0;
+		int end;
+		int sum=0;
+		int match=12;
+		int count=0;
+		
+		for(end=0;end<arr.length;end++){
+		    sum=sum+arr[end];
+		    
+		    
+		    while(sum>match && start<=end){
+		        sum=sum-arr[start];
+		        start++;
+		    }
+		    
+		    if(sum==match)
+		    count++;
+		    
+		    
+		}
+		
+		System.out.println(count);
+	}
+}

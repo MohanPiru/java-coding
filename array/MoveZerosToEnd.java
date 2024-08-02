@@ -1,28 +1,31 @@
-// public class Main {
-//     public static void moveZeroes(int[] nums) {
-//         int nonZeroIndex = 0;
-//         for (int i = 0; i < nums.length; i++) {
-//             if (nums[i] != 0) {
-//                 if (i != nonZeroIndex) { // Swap only if nonZeroIndex is different from current index
-//                     int temp = nums[i];
-//                     nums[i] = nums[nonZeroIndex];
-//                     nums[nonZeroIndex] = temp;
-//                 }
-//                 nonZeroIndex++;
-//             }
-//         }
-//     }
-
-//     public static void main(String[] args) {
-//         int[] nums = {0, 1, -2, 3, 4, 0, 5, -27, 9, 0};
-//         moveZeroes(nums);
-//         System.out.print("Modified array: ");
-//         for (int num : nums) {
-//             System.out.print(num + " ");
-//         }
-//     }
+// public class Main
+// {
+// 	public static void main(String[] args) {
+// 		int[] arr={0,0,2,4,0,0,5,0,1,0,9};
+		
+// 		int empty=0;
+// 		int full=0;
+// 		int i=0;
+// 		int j=arr.length-1;
+// 		while(i<=j){
+// 		    if(arr[j]==0)
+// 		    j--;
+// 		    if(arr[i]>0)
+// 		    i++;
+// 		    if(i<j && arr[i]==0 && arr[j]>0){
+// 		    int temp=arr[i];
+// 		    arr[i]=arr[j];
+// 		    arr[j]=temp;
+// 		    i++;
+// 		    j--;
+// 		    }
+// 		}
+// 		for(int a:arr)
+// 		System.out.print(a+" ");
+		
+// 	}
 // }
-
+`
 // good approach
 public class Main
 {
