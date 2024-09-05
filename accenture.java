@@ -137,3 +137,39 @@ public class Main
 	}
 }
 
+
+// 4 power of a contains the number in the last 
+// like 4rth power of 5 =625; 625 has 5 at last 
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int n=25;
+		int len=String.valueOf(n).length();
+		int po4=(int)Math.pow(n,4);
+		
+		System.out.println(isSame(po4,n,len));
+// 	String str=String.valueOf(po4);
+// 	str=str.substring(str.length()-len,str.length());
+	
+// 	if(str.equals(String.valueOf(n)))
+// 	System.out.println(true);
+//     else
+//     System.out.println(false);
+	
+	}
+	
+	public static boolean isSame(int temp,int temp2,int len){
+	    for(int i=0;i<len;i++){
+		    if(temp%10!=temp2%10)
+		    return false;
+		   
+		   temp=temp/10;
+		   temp2=temp2/10;
+		    
+		}
+		return true;
+	}
+}
+

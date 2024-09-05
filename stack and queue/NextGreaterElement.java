@@ -71,3 +71,36 @@ public class Solution {
     }
 
 }*/
+
+/* import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int[] arr={4,5,3,25};
+		Stack<Integer> st=new Stack<>();
+		int[] res=new int[arr.length];
+		res[res.length-1]=-1;
+		st.push(arr[arr.length-1]);
+		
+		
+		for(int i=arr.length-2;i>=0;i--){
+
+		    if(st.peek()>arr[i])
+		    res[i]=st.peek();
+		    else{
+		        while(!st.isEmpty() && st.peek()<=arr[i]  )
+		        st.pop();
+		        
+		        res[i]=st.isEmpty()?-1:st.peek();
+		    }
+		    
+		    st.push(arr[i]);
+		   
+		}
+		for(int a:res)
+		System.out.println(a);
+		
+	}
+}
+*/

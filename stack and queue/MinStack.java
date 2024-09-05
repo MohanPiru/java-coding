@@ -8,13 +8,6 @@ Design a stack that supports push, pop, top, and retrieving the minimum element 
 */
 
 
-/******************************************************************************
-
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
-
-*******************************************************************************/
 
 import java.util.Stack;
 public class Main{
